@@ -116,3 +116,21 @@ ul li a:hover{
     font-size: larger;
     font-weight:500;
 }
+
+a{
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+}
+
+a:hover{
+    text-decoration:underline;
+    text-shadow: wheat;
+}
+
+.about{
+    text-align: center;
+    font-family: monospace;
+    font-size: larger;
+    font-weight: bolder;
+}
