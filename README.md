@@ -1,4 +1,4 @@
-# github.io
+# takhtar
 MyPage
 
 A simple website/page made with pure HTML5 & CSS to share all 
