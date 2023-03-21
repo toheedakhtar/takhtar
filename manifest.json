@@ -1,7 +1,7 @@
 {
     "name":"Toheed Akhtar",
     "short_name":"TA",
-    "start_url":"index.html",
+    "start_url":"/",
     "display":"standalone",
     "description":"This is a portfolio cum shortucut for me.",
     "icons":[
