@@ -1,25 +1,19 @@
-var cacheName = takhatr';
-var filesToCache = [
-  '/',
-  '/index.html',
-  'css/styles.css'
-];
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
-  );
+var staticCacheName = "TA";
+
+self.addEventListener("install", function (e) {
+e.waitUntil(
+	caches.open(staticCacheName).then(function (cache) {
+	return cache.addAll(["/"]);
+	})
+);
 });
-self.addEventListener('activate',  event => {
-  event.waitUntil(self.clients.claim());
+
+self.addEventListener("fetch", function (event) {
+console.log(event.request.url);
+
+event.respondWith(
+	caches.match(event.request).then(function (response) {
+	return response || fetch(event.request);
+	})
+);
 });
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request, {ignoreSearch:true}).then(response => {
-      return response || fetch(event.request);
-    })
-  );
-})
