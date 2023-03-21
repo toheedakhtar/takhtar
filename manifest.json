@@ -1,7 +1,7 @@
 {
     "name":"Toheed Akhtar",
     "short_name":"TA",
-    "start_url":"/",
+    "start_url":"https://toheedakhtar.github.io/takhtar/",
     "display":"standalone",
     "description":"This is a portfolio cum shortucut for me.",
     "icons":[
