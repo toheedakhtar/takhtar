@@ -5,11 +5,11 @@ e.waitUntil(
 	caches.open(staticCacheName).then(function (cache) {
 	return cache.addAll([
 		"/",
-		"/assets",
-		"/css",
-		"/index.html",
-		"/serviceworker.js",
-		"/manifest.json"	
+		"assets",
+		"css",
+		"index.html",
+		"serviceworker.js",
+		"manifest.json"	
 	]);
     })
 );
