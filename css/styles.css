@@ -21,7 +21,7 @@ header {
 body {
     /* gradient bg */
     background: linear-gradient(-45deg, rgb(0, 0, 0), grey, #ececec, white);
-    background-size: 400% 400%;
+    background-size: auto auto;
     animation: gradient 15s ease infinite;
     color: black;
 }
