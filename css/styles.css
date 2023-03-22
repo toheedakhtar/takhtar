@@ -19,23 +19,8 @@ header {
 
 
 body {
-    /* gradient bg */
-    background: linear-gradient(-45deg, rgb(0, 0, 0), grey, #ececec, white);
-    background-size: auto auto;
-    animation: gradient 15s ease infinite;
+   background-color: #c3c3c3;
     color: black;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 
@@ -54,7 +39,7 @@ body h1 {
   
   .h1 {
     width: 45ch;
-    animation: typing 2.5s steps(45), blink .5s step-end infinite alternate ;
+    animation: typing 2.5s steps(30), blink .5s step-end infinite alternate ;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
