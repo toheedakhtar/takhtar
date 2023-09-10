@@ -40,10 +40,10 @@ body h1 {
   
   .h1 {
     width: 45ch;
-    animation: typing 2.5s steps(30), blink .5s step-end infinite alternate ;
+    animation: typing 2.5s steps(50), blink .1s step-end alternate ;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid;
+    border-right: 4px solid;
     font-family: monospace;
     font-size: 1em;
 }
@@ -52,11 +52,11 @@ body h1 {
     from {
       width: 0
     }
-    to {width: 55%}
+    to {width: 20%}
   }
       
   @keyframes blink {
-    70% {
+    80% {
       border-color: transparent
     }
 }
@@ -114,9 +114,33 @@ a:hover{
     text-shadow: wheat;
 }
 
-.about{
-    text-align: center;
+.projects{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* width: 50 */
+    margin-left: 25vw;
+    margin-right: 25vw;
+
+}
+
+.projects>a{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: x-large;
     font-family: monospace;
-    font-size: larger;
-    font-weight: bolder;
+
+}
+
+.projects>h3{
+    text-align: center;
+
+}
+
+hr{
+    background-color: black;
+}
+
+.projects>a:hover{
+    text-decoration: dashed;
 }
