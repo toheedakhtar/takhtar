@@ -1,26 +1,31 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 header {
     padding: 10px;
     text-align: center;
     font-weight: bolder;
-    font-family: Garamond;
-    background-color: black;
-    color: white;
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .name {
-    margin: auto;
-    padding: 20px;
+    padding-top: 20px;
+    margin: 10px;
+    text-decoration: underline;
 }
 
 
 body {
-   background-color: #c3c3c3;
-    color: black;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
     
 }
 
@@ -80,14 +85,14 @@ ul li{
 ul li a{
     text-decoration: none;
     padding: 15px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 ul li a:hover{
     text-decoration:underline;
     text-underline-offset: 10px;
     text-underline-position: below;
-    text-shadow: wheat;
+    text-shadow: rgb(255, 255, 255);
 }
 
 /* About */
@@ -103,44 +108,27 @@ ul li a:hover{
     font-weight:500;
 }
 
-a{
-    text-decoration: none;
-    padding: 15px;
-    color: black;
-}
-
-a:hover{
-    text-decoration:underline;
-    text-shadow: wheat;
-}
 
 .projects{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* width: 50 */
-    margin-left: 25vw;
-    margin-right: 25vw;
-
+    margin-left: 25px;
+    align-items: center;
 }
 
 .projects>a{
-    font-weight: bold;
+    color: blueviolet;
+    font-weight:700;
     text-decoration: underline;
-    font-size: x-large;
-    font-family: monospace;
-
+    font-size:medium;
+    margin: 3px;
 }
 
-.projects>h3{
-    text-align: center;
+/* .projects>h3{
+    /* text-align: left; 
 
-}
-
-hr{
-    background-color: black;
-}
+} */
 
 .projects>a:hover{
-    text-decoration: dashed;
+    color: white;
 }
