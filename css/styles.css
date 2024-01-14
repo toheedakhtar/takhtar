@@ -30,12 +30,14 @@ a, .main-content > a {
     color: #01796f;
     font-weight: 600;
     text-decoration: none;
+}
 
-
+a:hover{
+    text-decoration: underline;
 }
 
 .main-content-top{
-    padding: 0vh 5vw;
+    padding: 0vh 7vw;
     color: black;
 
 }
@@ -54,17 +56,53 @@ ul{
     margin: 0vh 10vw;
 }
 
+.main-content-top > img{
+    border-radius: 12%;
+
+}
+
 
 /* For Desktop View */
 @media screen and (max-width: 900px) {
-    body{
-        background-color: red;
+
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        margin: 0vh 0vw;
     }
+
+    .main-content-top{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-content-top > img{
+        border-radius: 12%;
+        max-height: 175px;
+        max-width: 175px;
+    }
+
     .main-content{
-        font-size: larger;
+        font-size: large;
         margin: auto;
         padding: 10px;
-        width: 50%;
+        /* width: 50%; */
     }
-}
- 
+
+    #links{
+        display: flex;
+        flex-direction: row;
+        /* padding: 10px;     */
+    }
+
+    #links > a{
+        padding: 3px;
+    }
+
+    ul {
+        margin-top: 0;
+        padding: 0px 20px;
+    }
+} 
