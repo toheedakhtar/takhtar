@@ -6,7 +6,7 @@ body {
     color: #000000;
     font-family: monospace;
     font-size: medium;
-    font-weight: semi-bold;
+    font-weight: 600;
 
     
 }
@@ -71,6 +71,8 @@ ul{
         display: flex;
         flex-direction: column;
         margin: 0vh 0vw;
+        font-weight: 600;
+
     }
 
     .main-content-top{
