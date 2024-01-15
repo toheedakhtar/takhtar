@@ -74,7 +74,7 @@ ul{
         display: flex;
         flex-direction: column;
         margin: 0vh 0vw;
-        font-weight: 600;
+        /* font-weight: 600; */
 
     }
 
