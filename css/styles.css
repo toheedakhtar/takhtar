@@ -2,11 +2,11 @@
 
 body {
     
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     color: #000000;
-    font-family: monospace;
-    font-size: medium;
-    font-weight: 600;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size:medium;
+    font-weight: semi-bold;
 
     
 }
@@ -22,10 +22,13 @@ body {
     display: flex;
     font-weight: 600;
     flex-direction: column;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: large;
 
 }
 
 a, .main-content > a {
+
     font-family: monospace;
     /* font-size: medium; */
     color: #01796f;
