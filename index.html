@@ -12,13 +12,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    
 
-  <script>
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('serviceworker.js', { scope: './' });
-}
-</script>
+
+    <script>
+        if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('serviceworker.js', { scope: './' });
+        }
+
+        if(window.screen.width <= 1028){
+            alert("Hey, it looks much better on Desktop, though its looks great on mobile too.\n-Toheed")
+        }
+    </script>
     
 </head>
 <body>
