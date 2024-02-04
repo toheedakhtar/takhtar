@@ -7,9 +7,9 @@ body {
     font-family: 'Ubuntu Mono', monospace;
     font-size:medium;
     font-weight: semi-bold;
-
     
 }
+
 
 .main{
     display: flex;
@@ -65,6 +65,9 @@ ul{
 
 }
 
+u{
+    text-decoration-color: #01796f;
+}
 
 /* For Desktop View */
 @media screen and (max-width: 900px) {
@@ -110,5 +113,9 @@ ul{
     ul {
         margin-top: 0;
         padding: 0px 20px;
+    }
+
+    u{
+        text-decoration-color: #01796f;
     }
 } 
