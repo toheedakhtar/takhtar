@@ -7,20 +7,46 @@ body {
     font-family: 'Ubuntu Mono', monospace;
     font-size:medium;
     font-weight: semi-bold;
-    
+    /* margin: 0; */
+    padding: 0;
 }
 
 .topbar {
     font-size: 20px;
     display: flex;
     justify-content: space-evenly;
+    padding: 10px;
+    margin: 0 5vw;;
+
+    background: rgba(223, 223, 223, 0.55);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(185, 183, 183, 0.3);
+    
+
+}
+
+.topbar > a{
+    color: #01796f;
 }
 
 .main{
     display: flex;
     flex-direction: row-reverse;
-    margin: 20vh 5vw;
+    margin: 10vh 5vw;
     padding: 20px;
+
+
+    /* From https://css.glass */
+    background: rgba(224, 224, 224, 0.41);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(185, 183, 183, 0.3);
+
 }
 
 #links{
