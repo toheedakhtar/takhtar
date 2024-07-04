@@ -2,10 +2,10 @@
 
 body {
     
-    /* background-color: black; */
+    /* background-color:#C4D7B2 ; */
     color: #000000;
-    /* font-family: 'Ubuntu Mono', monospace; */
-    font-size:medium;
+    font-family: 'Ubuntu Mono', monospace;
+    /* font-size:large; */
     font-weight: semi-bold;
     /* margin: 0; */
     padding: 0;
@@ -66,10 +66,12 @@ a:hover{
 }
 
 .main-content-top{
+ 
     padding: 0vh 7vw;
     color: black;
 
 }
+
 
 ul{
     padding: 0px 10px;
@@ -133,7 +135,6 @@ u{
 
     #links > a{
         padding: 3px;
-        font-size: medium;
     }
 
     ul {
