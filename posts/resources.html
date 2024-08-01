@@ -33,22 +33,40 @@
         color: var(--main-color);
     }
 
+    table {
+        margin-top: 4vh;
+    }
+    
     h2, h4 {
         color: var(--link-color);
     }
 
     td, tr {
-        padding: 10px;
+        padding: 15px;
     }
+    
+    @media screen and (max-width: 900px) {
+        table {
+            margin: 10px;
+            margin-top: 3vh;
+        }
+        ol{
+            list-style-type:none;
+        }
+    }
+
 </style>
 <body>
     <div id="resources">
         <h2>ML resources</h2>
+
         <table border="1">
             <tr>
                 <th>Category</th>
                 <th>Content</th>
             </tr>
+
+            <!-- math -->
             <tr>
                 <td><h4>Math</h4></td>
                 <td>
@@ -76,21 +94,13 @@
                 <td><h4>Tools</h4></td>
                 <td>
                     <ol>
+                        <li>Python</li>
                         <li>Numpy, Pandas, Matplotlib</li>
                         <li>sickit-learn</li>
                     </ol>
                 </td>
             </tr>
 
-            <!-- language -->
-            <tr>
-                <td><h4>Language</h4></td>
-                <td>
-                    <ol>
-                        <li>Python</li>
-                    </ol>
-                </td>
-            </tr>
             <!-- books -->
             <tr>
                 <td><h4>Books</h4></td>
@@ -102,18 +112,19 @@
             </tr>
 
             <tr>
-                <td><h4>Books</h4></td>
+                <td><h4>Other</h4></td>
                 <td>
                     <ol>
-                        <li>100 Pages Machine Learning Book</li>
+                        <li>3b1b</li>
+                        <li>StatQuest</li>
+                        <li>Krish Naik</li>
                     </ol>
                 </td>
             </tr>
             <!-- <tr> -->
-    </table>
+        </table>
         
- 
-        </ul>
+
     </div>
 </body>
 </html>
