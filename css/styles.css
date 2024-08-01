@@ -33,6 +33,7 @@ h2 > a {
     /* width: 100vw;
     height: 100vh; */
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .main > ul > li {
