@@ -73,9 +73,23 @@ li:hover{
 
 }
 
+.posts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 20vw;
+}
+
+.posts > ul > li > a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+
+
 #clone {
     color: var(--link-color);
-    position: absolute;
+    position:absolute;
     bottom: -10%;
 }
 
@@ -100,6 +114,6 @@ li:hover{
     #clone {
         color: var(--link-color);
         position: absolute;
-        bottom: -10%;
+        bottom: -60%;
     }
 }
