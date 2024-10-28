@@ -1,4 +1,4 @@
-function showAbout(){
+function showAbout() {
     about = `<p>A CS student and a builder<br><br> 
         I'm interested in intelligence and space. I think because they are most promising in answering the question perodically itching my mind, <u>"What is The Truth?</u> (I will write more on this soon)", plus I think they are a great north star as they make one humble, and to strive for something greater.
         <br>
@@ -9,9 +9,11 @@ function showAbout(){
 }
 
 
-function showProjects(){
+function showProjects() {
     projects = `<p>
         <ul>
+            <li><a target="_blank" href="https://beat-sync-eight.vercel.app/">beatSync</a> :     Fullstack ML music recommender based on KNN. </li>
+
             <li><a target="_blank" href="https://pixbook.pythonanywhere.com/">Pixbook</a> :     Read ebooks as they should be. </li>
             
             <li><a target="_blank" href="https://github.com/toheedakhtar/semantic_chunking_yt">Semantic-chunker-yt</a> :     Extracts meaningful text/audio pairs from youtube (url). </li>
@@ -29,13 +31,12 @@ function showProjects(){
             <li><a target="_blank" href="https://drive.google.com/drive/folders/1uLYUTqknxdlGOqGdH6fZ8C_Mayl1bqa-">ChatBot</a> :     Upload data and interact with it. </li>
             </ul>
             </p>`
-            document.getElementById('content').innerHTML = projects;
-        }
-        
-        
-function showReadingList(){
+    document.getElementById('content').innerHTML = projects;
+}
+
+
+function showReadingList() {
     list = `<ul>
-        <li><a>The Diamond Age </a>(reread)</li>
         <li>1984</li>
         <li>The Alchemist</li>
         <li>Pride and Prejudice</li>
@@ -54,10 +55,10 @@ function showReadingList(){
         <li>Delivering Happiness : Tony Hsieh autobiography</li>
         <li>.....</li>
         </ul>`
-        document.getElementById('content').innerHTML = list;
+    document.getElementById('content').innerHTML = list;
 }
 
-function showLinks(){
+function showLinks() {
     links = `<ul>
             <li><a href="https://github.com/toheedakhtar" target="_blank">Github</a></li>
             <li><a href="https://www.linkedin.com/in/toheedakhtar01" target="_blank">LinkedIN</a></li>

@@ -1,8 +1,7 @@
-
 :root {
-    --bg-color: #282828;
-    --link-color: #79AC78;
-    --main-color: #F9EFDB;
+    --bg-color: #ffffff;
+    --link-color: #23c790;
+    --main-color: #000000;
 }
 
 body {
@@ -10,23 +9,24 @@ body {
     cursor: crosshair;
     margin: 0vh 0vw;
     padding: 0vh 0vw;
-    font-family:  "IBM Plex Mono", monospace;
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
     color: var(--main-color);
 }
-h2{
+
+h2 {
     text-align: center;
     font-weight: 400;
     padding-bottom: 5px;
     border-bottom: 1px dashed var(--link-color);
 }
 
-h2 > a {
+h2>a {
     text-decoration: none !important;
     color: var(--mains-color);
 }
 
-.main > ul{
+.main>ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,13 +37,13 @@ h2 > a {
     flex-wrap: wrap;
 }
 
-.main > ul > li {
+.main>ul>li {
     font-size: x-large;
     margin: 3vw;
     color: var(--link-color);
 }
 
-li:hover{
+li:hover {
     text-decoration: underline;
 }
 
@@ -59,18 +59,18 @@ li:hover{
 
 }
 
-#content > p  > u{
-    color:var(--link-color);
+#content>p>u {
+    color: var(--link-color);
 }
 
-#content > ul > li > a {
+#content>ul>li>a {
     text-decoration: none !important;
-    color:var(--link-color);
+    color: var(--link-color);
 }
 
-#content > p > a {
+#content>p>a {
     text-decoration: none !important;
-    color:var(--link-color);
+    color: var(--link-color);
 
 }
 
@@ -79,20 +79,22 @@ li:hover{
 
 #clone {
     color: var(--link-color);
-    position:absolute;
+    position: absolute;
     bottom: -10%;
 }
 
 @media screen and (max-width: 900px) {
 
-    *{
+    * {
         margin: 5px 0;
         padding: 2px 0;
     }
-    .main > ul > li {
-        font-size:medium;
+
+    .main>ul>li {
+        font-size: medium;
         margin: 3vw;
     }
+
     #content {
         display: flex;
         flex-direction: row;
@@ -101,6 +103,7 @@ li:hover{
         margin: 0 10vw;
         font-size: medium;
     }
+
     #clone {
         color: var(--link-color);
         position: absolute;
