@@ -62,7 +62,7 @@ function showLinks() {
     links = `<ul>
             <li><a href="https://github.com/toheedakhtar" target="_blank">Github</a></li>
             <li><a href="https://www.linkedin.com/in/toheedakhtar01" target="_blank">LinkedIN</a></li>
-            <li><a href="https://mobile.twitter.com/ToheedAkhtar0" target="_blank">Twitter/X</a></li>
+            <li><a href="https://x.com/toheedakhtar01" target="_blank">Twitter/X</a></li>
             <li><a href="https://mail.google.com/mail/?view=cm&source=mailto&to=toheedak333@gmail.com" target="_blank">Gmail</a></li>`
 
     document.getElementById('content').innerHTML = links;
