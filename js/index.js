@@ -12,6 +12,11 @@ function showAbout() {
 function showProjects() {
     projects = `<p>
         <ul>
+            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">llm-scratch</a> :     Large Language Model trained and finetuned from scratch in Python and PyTorch. </li>
+            <br>
+
+            <li><a target="_blank" href="https://github.com/toheedakhtar/RDR2-Journal">RDR2-Jorunal</a> :     Replica of Arthur Morgan's Jorunal from RDR2.</li>
+
             <li><a target="_blank" href="https://beat-sync-eight.vercel.app/">beatSync</a> :     Fullstack ML music recommender based on KNN. </li>
 
             <li><a target="_blank" href="https://pixbook.pythonanywhere.com/">Pixbook</a> :     Read ebooks as they should be. </li>
