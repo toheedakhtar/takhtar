@@ -42,6 +42,7 @@ function showProjects() {
 
 function showReadingList() {
     list = `<ul>
+        <li>Norwegian woods</li>
         <li>1984</li>
         <li>The Alchemist</li>
         <li>Pride and Prejudice</li>
