@@ -14,8 +14,7 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <script>
         if ('serviceWorker' in navigator) {
@@ -26,41 +25,44 @@
 </head>
 
 <body>
-    <div class="main">
-        <h2><a href="./assets/ToheedAkhtar_Resume_9_25_pb.pdf" target="_blank">TOHE<sup>2</sup>D AKHTAR</a></h2>
-        <p style="text-align: center; font-size: large;"><a href=""
-                style="color: var(--link-color); text-decoration: none;">home </a>
-<!--             <a style="color: var(--main-color); text-decoration: none;" href="./posts/ml_resources.html">posts</a> -->
-            <!-- <a style="color: var(--main-color); text-decoration: none;"
-                href="./assets/ToheedAkhtar_Resume_3.25_pb.pdf">CV</a> -->
-            <a style="color: var(--main-color); text-decoration: none;"
-            href="./assets/ToheedAkhtar_Resume_9_25_pb.pdf">CV</a>
-        </p>
-
-        <ul>
-            <li onclick="showAbout()">about</li>
-            <li onclick="showProjects()">projects</li>
-            <li onclick="showReadingList()">booklist</li>
-            <li onclick="showLinks()">links</li>
-        </ul>
+    <div class="paper-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h1 class="title"><a href="" target="_blank">Toheed Akhtar</a></h1>
+                <p class="subtitle">Aspiring AI Researcher</p>
+                
+                <div class="banner-image">
+                    <img src="https://cdn.pfps.gg/banners/3867-one-piece-gif.png" alt="Banner" />
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <button onclick="showAbout()" class="nav-item">about</button>
+                    <button onclick="showProjects()" class="nav-item">projects</button>
+                    <button onclick="showReplications()" class="nav-item">replications</button>
+                    <button onclick="showPublications()" class="nav-item">publications</button>
+                    <button onclick="showLinks()" class="nav-item">contact</button>
+                </nav>
+                
+                <div class="metadata">
+                    <p class="meta-label">Links</p>
+                    <p><a href="./assets/ToheedAkhtar_Resume_12_25_ML.pdf" target="_blank">cv</a></p>
+                    <p><a href="https://github.com/toheedakhtar" target="_blank">github</a></p>
+                    <p><a href="https://www.linkedin.com/in/toheedakhtar01" target="_blank">linkedIn</a></p>
+                    <p><a href="https://x.com/toheedakhtar01" target="_blank">X</a></p>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="content-area">
+            <div id="content">
+                <p>AI Researcher exploring the frontiers of machine learning and artificial intelligence. Select a section to explore.</p>
+            </div>
+        </main>
     </div>
 
-    <div id="content">
-        <p>choose from above or <a href="./assets/ToheedAkhtar_Resume_9_25_pb.pdf" target="_blank">here</a> for resume.
-        </p>
-    </div>
-
-    <!-- <div class="posts">
-        <h4>posts</h4>
-        <ul>
-            <li><a href="./posts/ml_resources.html">ml resources</a></li>
-        </ul>
-    </div> -->
-
-    <a href="https://github.com/toheedakhtar/takhtar" id="clone">clone this site</a>
+    <script src="js/index.js"></script>
 </body>
-
-<script src="js/index.js"></script>
-
 
 </html>
