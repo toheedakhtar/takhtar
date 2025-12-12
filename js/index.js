@@ -1,75 +1,120 @@
 function showAbout() {
-    about = `<p>A CS student and a builder<br><br> 
-        I'm interested in intelligence and space. I think because they are most promising in answering the question perodically itching my mind, <u>"What is The Truth?</u> (I will write more on this soon)", plus I think they are a great north star as they make one humble, and to strive for something greater.
-        <br>
-        <br>Tinkering with AI/ML right now and building projects that jumps into my mind perodically. I also like reading, anime, and boxing.<br>
-        <u>Looking for internships and oppurtunities to learn and grow.</u>
-        </p>`
+    about = `
+        <h3>About</h3>
+        <p>An aspiring AI researcher and CS student with a deep passion for understanding intelligence and exploring the frontiers of machine learning.</p>
+        
+        <p>I'm interested in intelligence and space, areas that address profound questions like <em>"What is The Truth?"</em>  These pursuits keep me humble and striving for something greater.</p>
+        
+        <p>I'm passionate about AI/ML research, building systems from scratch and replicating papers to understand them deeply. I work on training LLMs, exploring different architectures, putting things together and trying out new ideas and thinking critically about alignment and its implications.</p>
+        
+        <p>Beyond research, I enjoy reading, anime, and boxing.</p>
+        
+        <p><strong>Currently seeking:</strong> Research opportunities and collaborations in AI/ML.</p>
+
+        <div class="experience">
+            <p class="experience-title">Experience</p>
+            <ul class="experience-list">
+                <li class="experience-item">
+                    <div class="experience-row">
+                        <span class="experience-role">AI/ML Intern · Chirpn AI</span>
+                        <span class="experience-date">Mar 2025 – Oct 2025</span>
+                    </div>
+                    <p style="color: #555; font-size: 0.95rem; margin: 0;">Pune / Remote</p>
+                    <ul class="experience-points">
+                        <li>Created coding, GitHub, and Jira agents from scratch using CrewAI.</li>
+                        <li>Owned workflow development and cut token usage by agents by ~85%.</li>
+                        <li>Built A2A, MCP protocols and custom tools for GitHub, Jira, and file operations.</li>
+                        <li>Built and deployed agentic workflows in production using LangGraph and Docker.</li>
+                        <li>Delivered client demos for agentic AI workflow solutions.</li>
+                        <li>Worked on initial project plans and technical specifications for client engagements.</li>
+                    </ul>
+                </li>
+                <li class="experience-item">
+                    <div class="experience-row">
+                        <span class="experience-role">Full Stack Developer · buildspace</span>
+                        <span class="experience-date">Aug 2024 – Sep 2024</span>
+                    </div>
+                    <p style="color: #555; font-size: 0.95rem; margin: 0;">SF Bay Area / Remote</p>
+                    <ul class="experience-points">
+                        <li>Selected for a 6-week program funded by Y Combinator and a16z (Nightz & Weekends).</li>
+                        <li>Built a tech product alongside a global community; shipped MVP to 1000+ hits.</li>
+                        <li>Independently built and scaled an MVP end-to-end.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    `;
     document.getElementById('content').innerHTML = about;
 }
 
-
 function showProjects() {
-    projects = `<p>
+    projects = `
+        <h3>Projects</h3>
+        
+        <h4>AI / ML</h4>
         <ul>
-            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">llm-scratch</a> :     Large Language Model trained and finetuned from scratch in Python and PyTorch. </li>
-            <br>
+            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">llm-scratch</a> — Large Language Model built from tokenization to evaluation from scratch in PyTorch.</li>
 
-            <li><a target="_blank" href="https://github.com/toheedakhtar/RDR2-Journal">RDR2-Jorunal</a> :     Replica of Arthur Morgan's Jorunal from RDR2.</li>
+            <li><a target="_blank" href="https://huggingface.co/Tohidichi/gemma3-genz-270m">gemma3-genz-270m</a> — Finetuned Gemma 3 on a synthetic dataset to speak like a Gen Z college student, Using LoRA.</li>
 
-            <li><a target="_blank" href="https://beat-sync-eight.vercel.app/">beatSync</a> :     Fullstack ML music recommender based on KNN. </li>
+            <li><a target="_blank" href="https://github.com/toheedakhtar/semantic_chunking_yt">Semantic-chunker-yt</a> — Extracts and aligns meaningful text/audio pairs from YouTube videos for multimodal analysis.</li>
 
-            <li><a target="_blank" href="https://pixbook.pythonanywhere.com/">Pixbook</a> :     Read ebooks as they should be. </li>
-            
-            <li><a target="_blank" href="https://github.com/toheedakhtar/semantic_chunking_yt">Semantic-chunker-yt</a> :     Extracts meaningful text/audio pairs from youtube (url). </li>
-            
-            <li><a target="_blank" href="https://huggingface.co/spaces/Tohidichi/moggedormogger">MoggedorMogger</a> :     ai model which tells your mog stats. </li>
-            
-            <li><a target="_blank" href="https://github.com/toheedakhtar/Titanic_survival">Titanic DS</a> :     Would you survive in the Titanic??. </li>
-            
-            <li><a target="_blank" href="https://github.com/toheedakhtar/cmdto">cmdto</a>:      cli tool for searching linux commands.</li>
-            
-            <li><a target="_blank" href="https://aitrustbar.pythonanywhere.com/">aitrustbar</a> :       A place to discuss AI safety and security. </li>
-            
-            <li><a target="_blank" href="https://youtu.be/XeepT7UOjrU">MiningGPT (SIH)</a> :      Answers question about mining legeslation. </li>
-            
-            <li><a target="_blank" href="https://drive.google.com/drive/folders/1uLYUTqknxdlGOqGdH6fZ8C_Mayl1bqa-">ChatBot</a> :     Upload data and interact with it. </li>
-            </ul>
-            </p>`
+            <li><a target="_blank" href="https://huggingface.co/spaces/Tohidichi/moggedormogger">MoggedorMogger</a> — Computer vision model that analyzes facial aesthetics and provides ratings based on a social media trend, deployed on HuggingFace.</li>
+
+            <li><a target="_blank" href="https://beat-sync-eight.vercel.app/">beatSync</a> — Full-stack ML recommender using KNN-based embeddings for personalized music suggestions.</li>
+        </ul>
+
+        <h4>Other</h4>
+        <ul>
+            <li><a target="_blank" href="https://github.com/toheedakhtar/RDR2-Journal">RDR2-Journal</a> — Detailed replica of Arthur Morgan's journal from Red Dead Redemption 2, recreating the aesthetic and storytelling.</li>
+
+            <li><a target="_blank" href="https://pixbook.pythonanywhere.com/">Pixbook</a> — Elegant ebook reader application designed to present digital books with optimal reading experience.</li>
+
+            <li><a target="_blank" href="https://github.com/toheedakhtar/cmdto">cmdto</a> — Command-line tool for quickly searching and discovering Linux terminal commands.</li>
+        </ul>
+    `;
     document.getElementById('content').innerHTML = projects;
 }
 
+function showReplications() {
+    replications = `
+        <h3>Replications</h3>
+        <p>Paper implementations and replications to understand ML research from the ground up:</p>
+        <ul>
+            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">GPT-2</a> — Replicated GPT-2 from BPE to Pretrained, Instruction fine tuned and loaded open weights.</li>
+            
+            <li><a target="_blank" href="https://github.com/toheedakhtar/ai-research/blob/main/multi_head_attn.ipynb">Attention / MHA</a> — Multi-head attention mechanism implementation, the core building block of transformers.</li>
+            
+            <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/LeNet">LeNet</a> — Implementation of LeNet to detect numbers.</li>
+            
+            <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/AlexNet">AlexNet</a> — Implementation in PyTorch.</li>
+            
+            <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/blob/main/RNN/simple_rnn.ipynb">Recurrent Neural Networks</a> — RNN implementation to detect language.</li>
+        </ul>
+    `;
+    document.getElementById('content').innerHTML = replications;
+}
 
-function showReadingList() {
-    list = `<ul>
-        <li>Norwegian woods</li>
-        <li>1984</li>
-        <li>The Alchemist</li>
-        <li>Pride and Prejudice</li>
-        <li>Ender's Game</li>
-        <li>Zero to One</li>
-        <li>Tao Te Ching</li>
-        <li>Man's Search for Meaning</li>
-        <li>Elon Musk</li>
-        <li>Can't hurt me</li>
-        <li>Shoe Dog</li>
-        <li>Steve Jobs</li>
-        <li>Rework</li>
-        <li>Six Easy pieces</li>
-        <li>My Inventions: Autobiography of Tesla</li>
-        <li>The Prophet by Khalil Gibran</li>
-        <li>Delivering Happiness : Tony Hsieh autobiography</li>
-        <li>.....</li>
-        </ul>`
-    document.getElementById('content').innerHTML = list;
+function showPublications() {
+    publications = `
+        <h3>Publications</h3>
+        <p>currently in the works.</p>
+        <p style="margin-top: 1.5rem; color: #888; font-style: italic; font-size: 0.95rem;">Coming soon.</p>
+    `;
+    document.getElementById('content').innerHTML = publications;
 }
 
 function showLinks() {
-    links = `<ul>
-            <li><a href="https://github.com/toheedakhtar" target="_blank">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/toheedakhtar01" target="_blank">LinkedIN</a></li>
+    links = `
+        <h3>Contact</h3>
+        <ul>
+            <li><a href="mailto:toheedak333@gmail.com">Email</a></li>
+            <li><a href="https://github.com/toheedakhtar" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/toheedakhtar01" target="_blank">LinkedIn</a></li>
             <li><a href="https://x.com/toheedakhtar01" target="_blank">Twitter/X</a></li>
-            <li><a href="https://mail.google.com/mail/?view=cm&source=mailto&to=toheedak333@gmail.com" target="_blank">Gmail</a></li>`
-
+        </ul>
+    `;
     document.getElementById('content').innerHTML = links;
 }
+
+window.addEventListener('DOMContentLoaded', showAbout);
