@@ -76,10 +76,12 @@ function showProjects() {
     document.getElementById('content').innerHTML = projects;
 }
 
-function showReplications() {
-    replications = `
-        <h3>Replications</h3>
-        <p>Paper implementations and replications to understand ML research from the ground up:</p>
+function showResearch() {
+    research = `
+        <h3>Research</h3>
+        
+        <h4>Paper Replications</h4>
+        <p>Paper implementations to understand ML research from the ground up:</p>
         <ul>
             <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">GPT-2</a> — Replicated GPT-2 from BPE to Pretrained, Instruction fine tuned and loaded open weights.</li>
             
@@ -91,24 +93,23 @@ function showReplications() {
             
             <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/blob/main/RNN/simple_rnn.ipynb">Recurrent Neural Networks</a> — RNN implementation to detect language.</li>
         </ul>
-    `;
-    document.getElementById('content').innerHTML = replications;
-}
+        
+        <h4>Publications</h4>
+        <p style="color: #888; font-style: italic; font-size: 0.95rem;">Coming soon.</p>
 
-function showPublications() {
-    publications = `
-        <h3>Publications</h3>
-        <p>currently in the works.</p>
-        <p style="margin-top: 1.5rem; color: #888; font-style: italic; font-size: 0.95rem;">Coming soon.</p>
+        <h4>Others</h4>
+        <ul>
+        <li><a target="_blank" href="https://docs.google.com/document/d/1NyE-k8w3-G5wi_w44Ym6SVUIt4qPnCqWcRZuhHf__JM/edit?usp=sharing">Epistemic Uncertainty</a> — its nature and causalness w experiments.</li>
+        </ul>
+
     `;
-    document.getElementById('content').innerHTML = publications;
+    document.getElementById('content').innerHTML = research;
 }
 
 function showLinks() {
     links = `
         <h3>Contact</h3>
         <ul>
-            <li><a href="mailto:toheedak333@gmail.com">Email</a></li>
             <li><a href="https://github.com/toheedakhtar" target="_blank">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/toheedakhtar01" target="_blank">LinkedIn</a></li>
             <li><a href="https://x.com/toheedakhtar01" target="_blank">Twitter/X</a></li>
