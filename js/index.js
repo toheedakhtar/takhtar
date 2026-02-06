@@ -5,11 +5,11 @@ function showAbout() {
         
         <p>I'm interested in intelligence and space, areas that address profound questions like <em>"What is The Truth?"</em>  These pursuits keep me humble and striving for something greater.</p>
         
-        <p>I'm passionate about AI/ML research, building systems from scratch and replicating papers to understand them deeply. I work on training LLMs, exploring different architectures, putting things together and trying out new ideas and thinking critically about alignment and its implications.</p>
+        <p>I'm passionate about AI/ML research with a focus on <strong>mechanistic interpretability, AI Safety, and Alignment</strong>. I believe these are crucial for the responsible development of AI technologies leading to a safer AGI.</p>
         
-        <p>Beyond research, I enjoy reading, anime, and boxing.</p>
+        <p>Beyond research, I enjoy reading, anime, and UFC.</p>
         
-        <p><strong>Currently seeking:</strong> Research opportunities and collaborations in AI/ML.</p>
+        <p><strong>Currently seeking:</strong> Research opportunities and collaborations.</p>
 
         <div class="experience">
             <p class="experience-title">Experience</p>
@@ -80,30 +80,25 @@ function showResearch() {
     research = `
         <h3>Research</h3>
         
-        <h4>Paper Replications</h4>
-        <p>Paper implementations to understand ML research from the ground up:</p>
         <ul>
-            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">GPT-2</a> — Replicated GPT-2 from BPE to Pretrained, Instruction fine tuned and loaded open weights.</li>
-            
-            <li><a target="_blank" href="https://github.com/toheedakhtar/ai-research/blob/main/multi_head_attn.ipynb">Attention / MHA</a> — Multi-head attention mechanism implementation, the core building block of transformers.</li>
-            
-            <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/LeNet">LeNet</a> — Implementation of LeNet to detect numbers.</li>
-            
-            <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/AlexNet">AlexNet</a> — Implementation in PyTorch.</li>
-            
-            <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/blob/main/RNN/simple_rnn.ipynb">Recurrent Neural Networks</a> — RNN implementation to detect language.</li>
+            <li><a target="_blank" href="https://www.lesswrong.com/posts/cgCeqi8cDn9RnDdQA/small-language-models-hallucinate-knowing-something-s-off">Small language models hallucinate knowing something's off</a> — Research on epistemic uncertainty detection in LLMs and how small models suppress detected uncertainty. Published on LessWrong (Jan 2026). <b>[lesswrong]</b></li>
+            <li><a target="_blank" href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/pull/56">Replaced Newton Schulz iteration with Polar Express in MuON Optimizer</a> - Leading in 1b token Marathon (2hr 51m 31s) | <a href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/blob/main/docs/LEADERBOARD.md">see credits</a>. <b>[OS Contribution]</b></li>
         </ul>
-        
-        <h4>Publications</h4>
-        <p style="color: #888; font-style: italic; font-size: 0.95rem;">Coming soon.</p>
-
-        <h4>Others</h4>
-        <ul>
-        <li><a target="_blank" href="https://docs.google.com/document/d/1NyE-k8w3-G5wi_w44Ym6SVUIt4qPnCqWcRZuhHf__JM/edit?usp=sharing">Epistemic Uncertainty</a> — its nature and causalness w experiments.</li>
-        </ul>
-
-    `;
+        `;
     document.getElementById('content').innerHTML = research;
+        // <h4>Paper Replications</h4>
+        // <p>Paper implementations to understand ML research from the ground up:</p>
+        // <ul>
+        //     <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">GPT-2</a> — Replicated GPT-2 from BPE to Pretrained, Instruction fine tuned and loaded open weights.</li>
+            
+        //     <li><a target="_blank" href="https://github.com/toheedakhtar/ai-research/blob/main/multi_head_attn.ipynb">Attention / MHA</a> — Multi-head attention mechanism implementation, the core building block of transformers.</li>
+            
+        //     <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/LeNet">LeNet</a> — Implementation of LeNet to detect numbers.</li>
+            
+        //     <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/AlexNet">AlexNet</a> — Implementation in PyTorch.</li>
+            
+        //     <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/blob/main/RNN/simple_rnn.ipynb">Recurrent Neural Networks</a> — RNN implementation to detect language.</li>
+        // </ul>
 }
 
 function showLinks() {
