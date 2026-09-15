@@ -1,32 +1,40 @@
 function showAbout() {
-    about = `
+    const about = `
         <h3>About</h3>
-        <p>An aspiring AI researcher and CS student with a deep passion for understanding intelligence and exploring the frontiers of machine learning.</p>
-        
-        <p>I'm interested in intelligence and space, areas that address profound questions like <em>"What is The Truth?"</em>  These pursuits keep me humble and striving for something greater.</p>
-        
-        <p>I'm passionate about AI/ML research with a focus on <strong>mechanistic interpretability, AI Safety, and Alignment</strong>. I believe these are crucial for the responsible development of AI technologies leading to a safer AGI.</p>
-        
-        <p>Beyond research, I enjoy reading, anime, and UFC.</p>
-        
-        <p><strong>Currently seeking:</strong> Research opportunities and collaborations.</p>
+        <p>I'm an AI safety researcher working on metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness in language models. I currently work as a Research Fellow at Lossfunk.</p>
+
+        <p>My research focuses on understanding how language models represent knowledge, uncertainty, and their own cognitive processes. I'm particularly interested in developing architecture-agnostic methods for studying these behaviors across different modalities.</p>
+
+        <p>I hold a B.Tech in Computer Science &amp; Engineering from Rajasthan Technical University. Beyond research, I enjoy reading, anime, UFC, and thinking about intelligence and space.</p>
+
+        <p><strong>Open to:</strong> AI safety research collaborations and full-time research opportunities.</p>
 
         <div class="experience">
             <p class="experience-title">Experience</p>
             <ul class="experience-list">
                 <li class="experience-item">
                     <div class="experience-row">
+                        <span class="experience-role">Research Intern/Fellow (AI Safety) · Lossfunk</span>
+                        <span class="experience-date">Mar 2026 – Present</span>
+                    </div>
+                    <p class="experience-location">Bengaluru, Karnataka</p>
+                    <ul class="experience-points">
+                        <li>Developing an architecture-agnostic framework for metacognition by studying invariants across frontier LLMs.</li>
+                        <li>Investigating whether factual correctness is represented internally in 8B-scale language models.</li>
+                    </ul>
+                </li>
+                <li class="experience-item">
+                    <div class="experience-row">
                         <span class="experience-role">AI/ML Intern · Chirpn AI</span>
                         <span class="experience-date">Mar 2025 – Oct 2025</span>
                     </div>
-                    <p style="color: #555; font-size: 0.95rem; margin: 0;">Pune / Remote</p>
+                    <p class="experience-location">Pune / Remote</p>
                     <ul class="experience-points">
                         <li>Created coding, GitHub, and Jira agents from scratch using CrewAI.</li>
-                        <li>Owned workflow development and cut token usage by agents by ~85%.</li>
-                        <li>Built A2A, MCP protocols and custom tools for GitHub, Jira, and file operations.</li>
+                        <li>Owned workflow development and reduced agent token usage by approximately 85%.</li>
+                        <li>Implemented A2A and MCP protocols plus custom tools for GitHub, Jira, and file operations.</li>
                         <li>Built and deployed agentic workflows in production using LangGraph and Docker.</li>
-                        <li>Delivered client demos for agentic AI workflow solutions.</li>
-                        <li>Worked on initial project plans and technical specifications for client engagements.</li>
+                        <li>Fine-tuned Llama and open-source vision models for handwritten-text recognition, achieving 95% accuracy.</li>
                     </ul>
                 </li>
                 <li class="experience-item">
@@ -34,13 +42,21 @@ function showAbout() {
                         <span class="experience-role">Full Stack Developer · buildspace</span>
                         <span class="experience-date">Aug 2024 – Sep 2024</span>
                     </div>
-                    <p style="color: #555; font-size: 0.95rem; margin: 0;">SF Bay Area / Remote</p>
+                    <p class="experience-location">San Francisco Bay Area / Remote</p>
                     <ul class="experience-points">
-                        <li>Selected for a 6-week program funded by Y Combinator and a16z (Nightz & Weekends).</li>
-                        <li>Built a tech product alongside a global community; shipped MVP to 1000+ hits.</li>
-                        <li>Independently built and scaled an MVP end-to-end.</li>
+                        <li>Selected for Nightz &amp; Weekends, a six-week program funded by Y Combinator and a16z.</li>
+                        <li>Independently built and scaled an MVP to more than 1,000 visits.</li>
                     </ul>
                 </li>
+            </ul>
+        </div>
+
+        <div class="profile-section">
+            <p class="experience-title">Achievements</p>
+            <ul class="achievement-list">
+                <li><strong>NIT Goa 0xGenIgnite Winner</strong> — Won a national-level Web3 hackathon at NIT Goa.</li>
+                <li><strong>Logithon '25 IIT Bombay Finalist</strong> — Placed in the top five at the national logistics hackathon.</li>
+                <li><strong>World Computer Hacker League '25</strong> — National qualifier.</li>
             </ul>
         </div>
     `;
@@ -48,27 +64,27 @@ function showAbout() {
 }
 
 function showProjects() {
-    projects = `
+    const projects = `
         <h3>Projects</h3>
-        
+
         <h4>AI / ML</h4>
         <ul>
-            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">llm-scratch</a> — Large Language Model built from tokenization to evaluation from scratch in PyTorch.</li>
+            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">llm-scratch</a> — A 127M-parameter GPT-2-style language model built from tokenization through pretraining, fine-tuning, and evaluation in PyTorch; trained on CPU.</li>
 
-            <li><a target="_blank" href="https://huggingface.co/Tohidichi/gemma3-genz-270m">gemma3-genz-270m</a> — Finetuned Gemma 3 on a synthetic dataset to speak like a Gen Z college student, Using LoRA.</li>
+            <li><a target="_blank" href="https://huggingface.co/Tohidichi/gemma3-genz-270m">gemma3-genz-270m</a> — Fine-tuned Gemma 3 270M using PEFT/LoRA, TRL, and more than 120 synthetic Gen-Z college conversations.</li>
 
             <li><a target="_blank" href="https://github.com/toheedakhtar/semantic_chunking_yt">Semantic-chunker-yt</a> — Extracts and aligns meaningful text/audio pairs from YouTube videos for multimodal analysis.</li>
 
-            <li><a target="_blank" href="https://huggingface.co/spaces/Tohidichi/moggedormogger">MoggedorMogger</a> — Computer vision model that analyzes facial aesthetics and provides ratings based on a social media trend, deployed on HuggingFace.</li>
+            <li><a target="_blank" href="https://huggingface.co/spaces/Tohidichi/moggedormogger">MoggedorMogger</a> — Computer vision model that analyzes facial aesthetics and provides ratings based on a social media trend, deployed on Hugging Face.</li>
 
             <li><a target="_blank" href="https://beat-sync-eight.vercel.app/">beatSync</a> — Full-stack ML recommender using KNN-based embeddings for personalized music suggestions.</li>
         </ul>
 
         <h4>Other</h4>
         <ul>
-            <li><a target="_blank" href="https://github.com/toheedakhtar/RDR2-Journal">RDR2-Journal</a> — Detailed replica of Arthur Morgan's journal from Red Dead Redemption 2, recreating the aesthetic and storytelling.</li>
+            <li><a target="_blank" href="https://github.com/toheedakhtar/RDR2-Journal">RDR2-Journal</a> — Detailed replica of Arthur Morgan's journal from Red Dead Redemption 2, recreating its aesthetic and storytelling.</li>
 
-            <li><a target="_blank" href="https://pixbook.pythonanywhere.com/">Pixbook</a> — Elegant ebook reader application designed to present digital books with optimal reading experience.</li>
+            <li><a target="_blank" href="https://pixbook.pythonanywhere.com/">Pixbook</a> — Ebook reader designed to present digital books with a focused reading experience.</li>
 
             <li><a target="_blank" href="https://github.com/toheedakhtar/cmdto">cmdto</a> — Command-line tool for quickly searching and discovering Linux terminal commands.</li>
         </ul>
@@ -77,34 +93,23 @@ function showProjects() {
 }
 
 function showResearch() {
-    research = `
+    const research = `
         <h3>Research</h3>
-        
+
         <ul>
-            <li><a target="_blank" href="https://www.lesswrong.com/posts/cgCeqi8cDn9RnDdQA/small-language-models-hallucinate-knowing-something-s-off">Small language models hallucinate knowing something's off</a> — Research on epistemic uncertainty detection in LLMs and how small models suppress detected uncertainty. Published on LessWrong (Jan 2026). <b>[lesswrong]</b></li>
-            <li><a target="_blank" href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/pull/56">Replaced Newton Schulz iteration with Polar Express in MuON Optimizer</a> - Leading in 1b token Marathon (2hr 51m 31s) | <a href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/blob/main/docs/LEADERBOARD.md">see credits</a>. <b>[OS Contribution]</b></li>
+            <li><strong>Is Factual Correctness Represented in LLMs? A Cross-Dataset Probing Study</strong> — Examining whether internal model representations encode factual correctness consistently across datasets. <span class="research-status">Draft / in preparation</span></li>
+            <li><a target="_blank" href="https://www.lesswrong.com/posts/cgCeqi8cDn9RnDdQA/small-language-models-hallucinate-knowing-something-s-off">Small language models hallucinate knowing something's off</a> — Research on epistemic uncertainty detection in LLMs and how small models suppress detected uncertainty. Published on LessWrong (Jan 2026). <b>[LessWrong]</b></li>
+            <li><a target="_blank" href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/pull/56">Polar Express contribution to the $5 LLM project</a> — Replaced the Newton–Schulz iteration in the MuON optimizer; the contribution is credited on the project's <a target="_blank" href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/blob/main/docs/LEADERBOARD.md">1B-token marathon leaderboard</a>. <b>[Open source]</b></li>
         </ul>
-        `;
+    `;
     document.getElementById('content').innerHTML = research;
-        // <h4>Paper Replications</h4>
-        // <p>Paper implementations to understand ML research from the ground up:</p>
-        // <ul>
-        //     <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">GPT-2</a> — Replicated GPT-2 from BPE to Pretrained, Instruction fine tuned and loaded open weights.</li>
-            
-        //     <li><a target="_blank" href="https://github.com/toheedakhtar/ai-research/blob/main/multi_head_attn.ipynb">Attention / MHA</a> — Multi-head attention mechanism implementation, the core building block of transformers.</li>
-            
-        //     <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/LeNet">LeNet</a> — Implementation of LeNet to detect numbers.</li>
-            
-        //     <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/tree/main/AlexNet">AlexNet</a> — Implementation in PyTorch.</li>
-            
-        //     <li><a target="_blank" href="https://github.com/toheedakhtar/Ml-Implementations/blob/main/RNN/simple_rnn.ipynb">Recurrent Neural Networks</a> — RNN implementation to detect language.</li>
-        // </ul>
 }
 
 function showLinks() {
-    links = `
+    const links = `
         <h3>Contact</h3>
         <ul>
+            <li><a href="mailto:toheedak333@gmail.com">Email</a></li>
             <li><a href="https://github.com/toheedakhtar" target="_blank">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/toheedakhtar01" target="_blank">LinkedIn</a></li>
             <li><a href="https://x.com/toheedakhtar01" target="_blank">Twitter/X</a></li>

@@ -282,6 +282,38 @@ body {
     color: var(--text-secondary);
 }
 
+.experience-location {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.profile-section {
+    margin: 2.5rem 0 0;
+}
+
+.achievement-list {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.achievement-list li {
+    margin: 0.65rem 0;
+}
+
+.research-status {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.05rem 0.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    color: var(--text-secondary);
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
     .paper-container {

@@ -1,0 +1,211 @@
+%-------------------------
+% Resume in LaTeX
+% Updated for Toheed Akhtar
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\color{Black}\scshape\raggedright\Large\bfseries
+}{}{0em}{}[\color{gray}\titlerule \vspace{-5pt}]
+
+% Make the generated PDF machine-readable and ATS-parsable.
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\normalsize #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize #1 & \textbf{\normalsize #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+% Resume starts here
+
+\begin{document}
+
+\begin{center}
+  {\Huge \scshape Toheed Akhtar} \vspace{5pt} \\
+  \small
+  \texttt{+91 **********} ,
+  \texttt{***********@gmail.com} ,
+  \href{https://www.linkedin.com/in/toheedakhtar01/}{linkedin.com/in/toheedakhtar01} ,
+  \href{https://github.com/toheedakhtar}{github.com/toheedakhtar}
+  \vspace{-8pt}
+\end{center}
+\vspace{-8pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Rajasthan Technical University, Kota, India}{2022 -- 2026}
+    {B.Tech. in Computer Science \& Engineering}{8.0/10 CGPA}
+\resumeSubHeadingListEnd
+\vspace{-7pt}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Lossfunk}{Mar 2026 -- Present}
+    {Research Intern (AI Safety)}{Bengaluru, Karnataka}
+  \resumeItemListStart
+    \resumeItem{Developing an architecture-agnostic framework for metacognition by studying invariants across frontier LLMs.}
+    \resumeItem{Investigating factual correctness in 8B-scale LLMs for the manuscript \textit{Is Factual Correctness Represented in LLMs? A Cross-Dataset Probing Study}.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Chirpn AI}{Mar 2025 -- Oct 2025}
+    {AI/ML Intern}{Pune, Remote}
+  \resumeItemListStart
+    \resumeItem{Created \textbf{coding, GitHub, and Jira agents} from scratch using CrewAI.}
+    \resumeItem{Owned workflow development and reduced agent token usage by \textbf{85\%}.}
+    \resumeItem{Implemented \textbf{A2A and MCP protocols} and custom tools for GitHub, Jira, and file operations.}
+    \resumeItem{Built and deployed production agentic workflows using \textbf{LangGraph and Docker}.}
+    \resumeItem{Fine-tuned Llama and open-source vision models for handwritten-text recognition, achieving \textbf{95\% accuracy}.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {buildspace}{Aug 2024 -- Sep 2024}
+    {Full Stack Developer}{San Francisco Bay Area, Remote}
+  \resumeItemListStart
+    \resumeItem{Selected for Nightz \& Weekends, a six-week program funded by \textbf{Y Combinator and a16z}.}
+    \resumeItem{Built a technology product alongside a global community.}
+    \resumeItem{Independently built and scaled an MVP to more than 1,000 visits.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-13pt}
+
+%-----------RESEARCH-----------
+\section{Research Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item{
+    \textbf{Is Factual Correctness Represented in LLMs? A Cross-Dataset Probing Study}
+    {: Studying whether factual correctness is represented consistently across datasets in LLM internal representations. \textit{Manuscript in preparation}.} \\
+    \textbf{\href{https://docs.google.com/document/d/1mzVqU-zzGajds7OKup95yKAWUMbxLxLQ-XGPi2nhpJs/edit?usp=sharing}{Higher-Order Alleys}}
+    \href{https://github.com/toheedakhtar/higher-order-alleys}{\textnormal{[\underline{Code}]}}
+    {: Found exploratory evidence that a Qwen3.6-27B latent tracks hidden-process degradation under fixed visible output; causal mediation to later judgments remains unresolved.} \\
+    \textbf{\href{https://www.lesswrong.com/posts/cgCeqi8cDn9RnDdQA/small-language-models-hallucinate-knowing-something-s-off}{Uncertainty Circuits}}
+    \href{https://github.com/toheedakhtar/uncertainty-circuits}{\textnormal{[\underline{Code}]}}
+    {: Investigated epistemic uncertainty, including its representation and causal role in model behavior.} \\
+    \textbf{\href{https://github.com/Open-Superintelligence-Lab/5-dollar-llm/pull/56}{\$5 LLM}}
+    {: Replaced the Newton--Schulz iteration with Polar Express in the MuON optimizer; credited on the project's 1B-token marathon leaderboard.}
+  }
+\end{itemize}
+\vspace{-17pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{LLM-from-Scratch}: Built a 127M-parameter GPT-2-style model in PyTorch}
+    {\href{https://github.com/toheedakhtar/llm-scratch}{\underline{Source Code}}}
+  \resumeItemListStart
+    \resumeItem{Implemented the complete pipeline from \textbf{tokenization} and \textbf{pretraining} through \textbf{fine-tuning and evaluation}.}
+    \resumeItem{Trained the \textbf{127M-parameter} model on \textbf{CPU}.}
+    \resumeItem{Reached \textbf{46.8\%} of Llama 3 8B's score under the same evaluation setup.}
+  \resumeItemListEnd
+  \vspace{-15pt}
+
+  \resumeProjectHeading
+    {\textbf{Gemma3-GenZ}: Fine-tuned Gemma 3 270M for Gen-Z-style conversations}
+    {\href{https://huggingface.co/Tohidichi/gemma3-genz-270m}{\underline{Hugging Face}}}
+  \resumeItemListStart
+    \resumeItem{Curated a synthetic dataset of more than 120 Gen-Z college conversations with slang and casual dialogue.}
+    \resumeItem{Fine-tuned Gemma 3 270M using \textbf{PEFT, LoRA, TRL, and SFTTrainer}.}
+    \resumeItem{Produced a model that generates contextually relevant, natural Gen-Z-style responses.}
+  \resumeItemListEnd
+  \vspace{-15pt}
+
+  \resumeProjectHeading
+    {\textbf{Research Implementations}: Research-paper and ML/DL implementations}
+    {
+      \href{https://github.com/toheedakhtar/ai-research/}{\underline{1}}\;
+      \href{https://github.com/toheedakhtar/ml-implementations}{\underline{2}}
+    }
+  \resumeItemListStart
+    \resumeItem{Implemented research papers and ML/DL concepts from scratch in Python and PyTorch.}
+    \resumeItem{Includes \textbf{MHA, GPT, RoPE, BPE, RNN, and AlexNet}.}
+  \resumeItemListEnd
+  \vspace{-14pt}
+
+\resumeSubHeadingListEnd
+\vspace{1pt}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item{
+    \textbf{NIT Goa 0xGenIgnite Winner}{: Won a national-level Web3 hackathon at NIT Goa.} \\
+    \textbf{Logithon '25 IIT Bombay Finalist}{: Placed in the top five at the national logistics hackathon.} \\
+    \textbf{World Computer Hacker League '25}{: National qualifier.}
+  }
+\end{itemize}
+\vspace{-13pt}
+
+\end{document}

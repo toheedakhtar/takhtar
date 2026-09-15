@@ -3,7 +3,7 @@
     "short_name":"TA",
     "start_url":"https://toheedakhtar.github.io/takhtar/",
     "display":"standalone",
-    "description":"This is a portfolio cum shortucut for me.",
+    "description":"Portfolio of Toheed Akhtar, an AI safety researcher studying metacognition and factual correctness in language models.",
     "icons":[
     {
     "src":"assets/logo/192x192.png",                     
