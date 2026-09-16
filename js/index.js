@@ -1,11 +1,24 @@
 function showAbout() {
-    const about = `
-        <h3>About</h3>
+    const introduction = document.body.classList.contains('brainrot-on') ? `
+        <p>AI safety researcher. Research Fellow at Lossfunk. Currently in my <em>“does the model know it’s clueless?”</em> arc: metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness. Chat, we are inspecting the weights.</p>
+
+        <p>I study how language models represent knowledge, uncertainty, and their own cognitive processes across architectures and modalities. Basically: the model is thinking about thinking, and I’m thinking about whether it’s actually doing that. Extremely normal behaviour.</p>
+
+        <p>B.Tech in Computer Science &amp; Engineering from Rajasthan Technical University. Off the clock: reading, UFC, intelligence, space, and a deeply unserious number of fictional training arcs.</p>
+
+        <p class="taste-note"><strong>The training arc:</strong> <em>One Piece</em>, <em>Black Clover</em>, and <em>Hajime no Ippo</em>. Luffy’s sense of direction, Asta’s refusal to quit, Ippo’s next round. Surely one more experiment is the power-up episode.</p>
+
+        <p class="taste-note"><strong>The cinema brain:</strong> <em>The Good, the Bad and the Ugly</em>, <em>Batman</em>, <em>Whiplash</em>, <em>Fight Club</em>, <em>Interstellar</em>, and <em>Arrival</em>. Somewhere between a western standoff with a bug, “not quite my tempo” at a training run, and learning an alien language to understand a tensor. Absolute cinema.</p>
+    ` : `
         <p>I'm an AI safety researcher working on metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness in language models. I currently work as a Research Fellow at Lossfunk.</p>
 
         <p>My research focuses on understanding how language models represent knowledge, uncertainty, and their own cognitive processes. I'm particularly interested in developing architecture-agnostic methods for studying these behaviors across different modalities.</p>
 
         <p>I hold a B.Tech in Computer Science &amp; Engineering from Rajasthan Technical University. Beyond research, I enjoy reading, anime, UFC, and thinking about intelligence and space.</p>
+    `;
+    const about = `
+        <h3>About</h3>
+        ${introduction}
 
         <p><strong>Open to:</strong> AI safety research collaborations and full-time research opportunities.</p>
 
@@ -60,7 +73,7 @@ function showAbout() {
             </ul>
         </div>
     `;
-    document.getElementById('content').innerHTML = about;
+    renderSection('about', about);
 }
 
 function showProjects() {
@@ -89,7 +102,7 @@ function showProjects() {
             <li><a target="_blank" href="https://github.com/toheedakhtar/cmdto">cmdto</a> — Command-line tool for quickly searching and discovering Linux terminal commands.</li>
         </ul>
     `;
-    document.getElementById('content').innerHTML = projects;
+    renderSection('projects', projects);
 }
 
 function showResearch() {
@@ -102,7 +115,7 @@ function showResearch() {
             <li><a target="_blank" href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/pull/56">Polar Express contribution to the $5 LLM project</a> — Replaced the Newton–Schulz iteration in the MuON optimizer; the contribution is credited on the project's <a target="_blank" href="https://github.com/Open-Superintelligence-Lab/5-dollar-llm/blob/main/docs/LEADERBOARD.md">1B-token marathon leaderboard</a>. <b>[Open source]</b></li>
         </ul>
     `;
-    document.getElementById('content').innerHTML = research;
+    renderSection('research', research);
 }
 
 function showLinks() {
@@ -115,7 +128,94 @@ function showLinks() {
             <li><a href="https://x.com/toheedakhtar01" target="_blank">Twitter/X</a></li>
         </ul>
     `;
-    document.getElementById('content').innerHTML = links;
+    renderSection('contact', links);
 }
 
-window.addEventListener('DOMContentLoaded', showAbout);
+function renderSection(section, html) {
+    const content = document.getElementById('content');
+    content.dataset.section = section;
+    content.innerHTML = html;
+    content.querySelectorAll('a[target="_blank"]').forEach(link => {
+        link.rel = 'noopener noreferrer';
+    });
+    content.classList.remove('content-enter');
+    void content.offsetWidth;
+    content.classList.add('content-enter');
+    const sections = ['about', 'projects', 'research', 'contact'];
+    document.getElementById('section-index').textContent = `0${sections.indexOf(section) + 1} / 04`;
+    document.querySelectorAll('.nav-item[data-section]').forEach(link => {
+        if (link.dataset.section === section) {
+            link.setAttribute('aria-current', 'page');
+        } else {
+            link.removeAttribute('aria-current');
+        }
+    });
+    document.title = `${section.charAt(0).toUpperCase() + section.slice(1)} — Toheed Akhtar`;
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const views = { about: showAbout, projects: showProjects, research: showResearch, contact: showLinks };
+    const currentView = () => {
+        const section = window.location.hash.slice(1);
+        if (Object.hasOwn(views, section)) views[section]();
+        else showAbout();
+    };
+
+    document.querySelectorAll('.nav-item[data-section]').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const section = link.dataset.section;
+            if (window.location.hash !== `#${section}`) {
+                window.history.pushState(null, '', `#${section}`);
+            }
+            views[section]();
+            const main = document.getElementById('main');
+            main.focus({ preventScroll: true });
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                main.scrollIntoView({ block: 'start' });
+            }
+        });
+    });
+    window.addEventListener('popstate', currentView);
+    window.addEventListener('hashchange', () => {
+        if (Object.hasOwn(views, window.location.hash.slice(1))) currentView();
+    });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const setTheme = (theme, persist = false) => {
+        const isLight = theme === 'light';
+        document.documentElement.dataset.theme = theme;
+        document.getElementById('theme-state').textContent = theme;
+        document.getElementById('theme-icon').textContent = isLight ? '☀' : '☾';
+        themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+        document.getElementById('theme-color').setAttribute('content', isLight ? '#f3f2e9' : '#101715');
+        if (persist) {
+            try { localStorage.setItem('theme', theme); } catch { /* Storage is optional. */ }
+        }
+    };
+    setTheme(document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
+    themeToggle.addEventListener('click', () => {
+        setTheme(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light', true);
+    });
+
+    const brainrot = document.getElementById('brainrot-toggle');
+    const setBrainrot = enabled => {
+        document.body.classList.toggle('brainrot-on', enabled);
+        brainrot.setAttribute('aria-pressed', String(enabled));
+        document.getElementById('brainrot-state').textContent = enabled ? 'on' : 'off';
+        if (document.getElementById('content').dataset.section === 'about') showAbout();
+    };
+    try { setBrainrot(localStorage.getItem('brainrot') !== 'off'); } catch { setBrainrot(true); }
+    brainrot.addEventListener('click', () => {
+        const enabled = brainrot.getAttribute('aria-pressed') !== 'true';
+        setBrainrot(enabled);
+        try { localStorage.setItem('brainrot', enabled ? 'on' : 'off'); } catch { /* Storage is optional. */ }
+    });
+    document.getElementById('back-to-top').addEventListener('click', event => {
+        event.preventDefault();
+        window.scrollTo({ top: 0 });
+        document.querySelector('.monogram').focus({ preventScroll: true });
+    });
+    document.querySelectorAll('a[target="_blank"]').forEach(link => { link.rel = 'noopener noreferrer'; });
+    currentView();
+});
