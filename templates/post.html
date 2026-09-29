@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{description}}">
+    <meta name="theme-color" id="theme-color" content="#f3f2e9">
+    {{canonical}}
+    <title>{{title}} — Tohe²d Akhtar</title>
+    <script>
+        try { document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light'; }
+        catch { document.documentElement.dataset.theme = 'light'; }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+<body>
+    <header class="post-site-header">
+        <a class="monogram" href="../index.html" aria-label="Tohe squared d Akhtar home">ta<span aria-hidden="true">*</span></a>
+        <a href="../index.html#blog">all writing</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+            <span id="theme-icon" aria-hidden="true">☀</span>
+            <span id="theme-state">light</span>
+        </button>
+    </header>
+    <main class="blog-post">
+        <header class="post-header">
+            <p class="post-label">{{label}}</p>
+            <h1>{{title}}</h1>
+            <p class="post-description">{{description}}</p>
+            <time datetime="{{date}}">{{displayDate}}</time>
+        </header>
+        <article class="post-content">
+{{content}}
+        </article>
+    </main>
+    <footer class="post-footer">
+        <a href="../index.html#blog">← back to all writing</a>
+        <span>Tohe<sup>2</sup>d Akhtar</span>
+    </footer>
+    <script src="../js/post.js"></script>
+</body>
+</html>

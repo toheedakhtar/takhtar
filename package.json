@@ -1,0 +1,11 @@
+{
+  "name": "takhtar",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:blog",
+    "build:blog": "node scripts/build-blog.mjs"
+  },
+  "devDependencies": {
+    "marked": "^15.0.12"
+  }
+}
