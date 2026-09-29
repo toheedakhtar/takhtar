@@ -1,14 +1,14 @@
 function showAbout() {
     const introduction = document.body.classList.contains('brainrot-on') ? `
-        <p>AI safety researcher. Research Fellow at Lossfunk. Currently in my <em>“does the model know it’s clueless?”</em> arc: metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness. Chat, we are inspecting the weights.</p>
+        <p>AI safety researcher. Research Fellow at Lossfunk. Currently locked in on the <em>“does the model know it’s lost?”</em> era: metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness. Chat, the weights are under review.</p>
 
-        <p>I study how language models represent knowledge, uncertainty, and their own cognitive processes across architectures and modalities. Basically: the model is thinking about thinking, and I’m thinking about whether it’s actually doing that. Extremely normal behaviour.</p>
+        <p>I look at how language models actually represent knowledge, uncertainty, and their own cognitive processes across architectures and modalities. The model is thinking about thinking. I’m checking whether that thought is real or just vibes. Extremely normal research behaviour.</p>
 
-        <p>B.Tech in Computer Science &amp; Engineering from Rajasthan Technical University. Off the clock: reading, UFC, intelligence, space, and a deeply unserious number of fictional training arcs.</p>
+        <p>B.Tech in Computer Science &amp; Engineering, Rajasthan Technical University. Off-hours: reading, UFC, intelligence, space, and an unreasonable amount of fictional training arcs.</p>
 
-        <p class="taste-note"><strong>The training arc:</strong> <em>One Piece</em>, <em>Black Clover</em>, and <em>Hajime no Ippo</em>. Luffy’s sense of direction, Asta’s refusal to quit, Ippo’s next round. Surely one more experiment is the power-up episode.</p>
+        <p class="taste-note"><strong>Anime stack:</strong> <em>One Piece</em>, <em>Black Clover</em>, <em>Hajime no Ippo</em>. Luffy’s navigation, Asta’s refusal to log off, Ippo’s next round. One more experiment and it’s officially the power-up episode.</p>
 
-        <p class="taste-note"><strong>The cinema brain:</strong> <em>The Good, the Bad and the Ugly</em>, <em>Batman</em>, <em>Whiplash</em>, <em>Fight Club</em>, <em>Interstellar</em>, and <em>Arrival</em>. Somewhere between a western standoff with a bug, “not quite my tempo” at a training run, and learning an alien language to understand a tensor. Absolute cinema.</p>
+        <p class="taste-note"><strong>Cinema brain:</strong> <em>The Good, the Bad and the Ugly</em>, <em>Batman</em>, <em>Whiplash</em>, <em>Fight Club</em>, <em>Interstellar</em>, <em>Arrival</em>. Equal parts western standoff with a bug, “not quite my tempo” on a training run, and learning an alien language just to parse a tensor.</p>
     ` : `
         <p>I'm an AI safety researcher working on metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness in language models. I currently work as a Research Fellow at Lossfunk.</p>
 
@@ -76,35 +76,6 @@ function showAbout() {
     renderSection('about', about);
 }
 
-function showProjects() {
-    const projects = `
-        <h3>Projects</h3>
-
-        <h4>AI / ML</h4>
-        <ul>
-            <li><a target="_blank" href="https://github.com/toheedakhtar/llm-scratch">llm-scratch</a> — A 127M-parameter GPT-2-style language model built from tokenization through pretraining, fine-tuning, and evaluation in PyTorch; trained on CPU.</li>
-
-            <li><a target="_blank" href="https://huggingface.co/Tohidichi/gemma3-genz-270m">gemma3-genz-270m</a> — Fine-tuned Gemma 3 270M using PEFT/LoRA, TRL, and more than 120 synthetic Gen-Z college conversations.</li>
-
-            <li><a target="_blank" href="https://github.com/toheedakhtar/semantic_chunking_yt">Semantic-chunker-yt</a> — Extracts and aligns meaningful text/audio pairs from YouTube videos for multimodal analysis.</li>
-
-            <li><a target="_blank" href="https://huggingface.co/spaces/Tohidichi/moggedormogger">MoggedorMogger</a> — Computer vision model that analyzes facial aesthetics and provides ratings based on a social media trend, deployed on Hugging Face.</li>
-
-            <li><a target="_blank" href="https://beat-sync-eight.vercel.app/">beatSync</a> — Full-stack ML recommender using KNN-based embeddings for personalized music suggestions.</li>
-        </ul>
-
-        <h4>Other</h4>
-        <ul>
-            <li><a target="_blank" href="https://github.com/toheedakhtar/RDR2-Journal">RDR2-Journal</a> — Detailed replica of Arthur Morgan's journal from Red Dead Redemption 2, recreating its aesthetic and storytelling.</li>
-
-            <li><a target="_blank" href="https://pixbook.pythonanywhere.com/">Pixbook</a> — Ebook reader designed to present digital books with a focused reading experience.</li>
-
-            <li><a target="_blank" href="https://github.com/toheedakhtar/cmdto">cmdto</a> — Command-line tool for quickly searching and discovering Linux terminal commands.</li>
-        </ul>
-    `;
-    renderSection('projects', projects);
-}
-
 function showResearch() {
     const research = `
         <h3>Research</h3>
@@ -116,6 +87,26 @@ function showResearch() {
         </ul>
     `;
     renderSection('research', research);
+}
+
+function showBlog() {
+    const posts = window.BLOG_POSTS || [];
+    const items = posts.map(post => {
+        const source = post.source ? ` · ${post.source}${post.external ? ' ↗' : ''}` : '';
+        const linkAttributes = post.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return `
+        <li>
+            <a href="${post.url}"${linkAttributes}>${post.title}</a>
+            <p>${post.description}</p>
+            <time datetime="${post.date}">${post.displayDate} · ${post.label}${source}</time>
+        </li>
+    `;
+    }).join('');
+    renderSection('blog', `
+        <h3>Writing</h3>
+        <p>Research notes, technical walkthroughs, and occasional dispatches from the latent space.</p>
+        <ul class="post-list">${items || '<li>No posts yet.</li>'}</ul>
+    `);
 }
 
 function showLinks() {
@@ -141,7 +132,7 @@ function renderSection(section, html) {
     content.classList.remove('content-enter');
     void content.offsetWidth;
     content.classList.add('content-enter');
-    const sections = ['about', 'projects', 'research', 'contact'];
+    const sections = ['about', 'research', 'contact', 'blog'];
     document.getElementById('section-index').textContent = `0${sections.indexOf(section) + 1} / 04`;
     document.querySelectorAll('.nav-item[data-section]').forEach(link => {
         if (link.dataset.section === section) {
@@ -150,11 +141,11 @@ function renderSection(section, html) {
             link.removeAttribute('aria-current');
         }
     });
-    document.title = `${section.charAt(0).toUpperCase() + section.slice(1)} — Toheed Akhtar`;
+    document.title = `${section.charAt(0).toUpperCase() + section.slice(1)} — Tohe²d Akhtar`;
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    const views = { about: showAbout, projects: showProjects, research: showResearch, contact: showLinks };
+    const views = { about: showAbout, research: showResearch, contact: showLinks, blog: showBlog };
     const currentView = () => {
         const section = window.location.hash.slice(1);
         if (Object.hasOwn(views, section)) views[section]();
