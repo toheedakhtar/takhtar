@@ -16,9 +16,10 @@ Public site: `https://toheedakhtar.github.io/takhtar/`
 
 ## Design direction
 
-- Light mode is the first-visit default; dark mode is available and persisted in `localStorage`.
-- The accent is dark viridian (`#245c4e`).
-- Body copy uses Inter. Identity, monogram, section headings, and article headings use IBM Plex Mono.
+- The site intentionally uses minimal CSS. Keep only typography, margins/padding, widths, layout, responsive behavior, and accessibility rules unless the user explicitly requests visual styling.
+- Do not add a custom palette, ornamental backgrounds, borders, shadows, image filters, transitions, or hover effects by default.
+- Light mode is the first-visit default; dark mode is available and persisted in `localStorage`. Theme presentation relies on the browser's native `color-scheme` rather than a custom palette.
+- Body copy uses Inter. The monogram, section headings, and article headings use IBM Plex Mono. The main name heading intentionally uses the browser-default `h1` appearance with no custom styling.
 - The public display name is **Tohe²d Akhtar**. Use semantic superscript in visible HTML: `Tohe<sup>2</sup>d`. Use `Tohe²d` in plain-text metadata and page titles. Use “Tohe squared d” in accessibility labels.
 - Keep real filenames, account handles, URLs, and resume paths unchanged even when they contain `Toheed`.
 - The main layout is capped at `1080px`; reading content is capped at `680px`.
@@ -167,6 +168,11 @@ The generated page will receive a canonical link.
 - Removed the ML resources roadmap source, generated article, and legacy article; rebuilt `js/blog-posts.js` to remove its listing.
 - Removed the Projects section and moved About, Research, Contact, and Blog into an always-visible sticky top bar.
 - Added this project context document.
+
+### 2026-10-06
+
+- Reduced the active portfolio and article stylesheets to structural CSS only: fonts, dimensions, layout, spacing, responsive behavior, and accessibility.
+- Removed the custom color palette and decorative backgrounds, borders, shadows, filters, animations, and hover effects.
 
 ## Current Git state at this handoff
 

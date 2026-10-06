@@ -1,6 +1,6 @@
 function showAbout() {
     const introduction = document.body.classList.contains('brainrot-on') ? `
-        <p>AI safety researcher. Research Fellow at Lossfunk. Currently locked in on the <em>“does the model know it’s lost?”</em> era: metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness. Chat, the weights are under review.</p>
+        <p>AI researcher. Research Fellow at Lossfunk. Currently locked in on the <em>“does the model know it’s lost?”</em> era: metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness. Chat, the weights are under review.</p>
 
         <p>I look at how language models actually represent knowledge, uncertainty, and their own cognitive processes across architectures and modalities. The model is thinking about thinking. I’m checking whether that thought is real or just vibes. Extremely normal research behaviour.</p>
 
@@ -10,7 +10,7 @@ function showAbout() {
 
         <p class="taste-note"><strong>Cinema brain:</strong> <em>The Good, the Bad and the Ugly</em>, <em>Batman</em>, <em>Whiplash</em>, <em>Fight Club</em>, <em>Interstellar</em>, <em>Arrival</em>. Equal parts western standoff with a bug, “not quite my tempo” on a training run, and learning an alien language just to parse a tensor.</p>
     ` : `
-        <p>I'm an AI safety researcher working on metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness in language models. I currently work as a Research Fellow at Lossfunk.</p>
+        <p>I'm an AI researcher working on metacognition, mechanistic interpretability, epistemic uncertainty, and factual correctness in language models. I currently work as a Research Fellow at Lossfunk.</p>
 
         <p>My research focuses on understanding how language models represent knowledge, uncertainty, and their own cognitive processes. I'm particularly interested in developing architecture-agnostic methods for studying these behaviors across different modalities.</p>
 
@@ -20,14 +20,14 @@ function showAbout() {
         <h3>About</h3>
         ${introduction}
 
-        <p><strong>Open to:</strong> AI safety research collaborations and full-time research opportunities.</p>
+        <p><strong>Open to:</strong> AI research collaborations and full-time research opportunities.</p>
 
         <div class="experience">
             <p class="experience-title">Experience</p>
             <ul class="experience-list">
                 <li class="experience-item">
                     <div class="experience-row">
-                        <span class="experience-role">Research Intern/Fellow (AI Safety) · Lossfunk</span>
+                        <span class="experience-role">Research Intern/Fellow · Lossfunk</span>
                         <span class="experience-date">Mar 2026 – Present</span>
                     </div>
                     <p class="experience-location">Bengaluru, Karnataka</p>
